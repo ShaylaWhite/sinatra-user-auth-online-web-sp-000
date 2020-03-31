@@ -1,18 +1,14 @@
+
 <h1>Sign Up Below:</h1>
-
-
-<form method="post" action="/registrations">  
-  Name: 
-  Email: <br>
-  Password: <br>
-  <button type="submit" value="submit">Submit</button>
+<form action='/registrations' method="POST">
+<label for "name">Name:</label>
+<input type="text" id="name" name="name">
+<br />
+<label for "email">Email:</label>
+<input type="text" id="email" name="email">
+<br />
+<label for "password">Password:</label>
+<input type="text" id="password" name="password">
+<br />
+<input type="submit" id="submit" value="Sign Up">
 </form>
-
-
-<% @heroes.each do |hero| %>
-  <div class="hero">
-    <h2>Hero Name: <%= hero.name %></h2><br>
-    <p>Hero Power: <%= hero.power %></p><br>
-    <p>Hero Biography: <%= hero.biography %></p><br>
-  </div><br>
-<% end %>
