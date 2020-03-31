@@ -2,12 +2,16 @@
 
 
 <form method="post" action="/registrations">  
-
-  
-  
   Email: <input id="content" type="text" name="content"><br>
   Password: <input id="content" type="text" name="content"><br>
   <button type="submit" value="submit">Submit</button>
 </form>
 
 
+<% @heroes.each do |hero| %>
+  <div class="hero">
+    <h2>Hero Name: <%= hero.name %></h2><br>
+    <p>Hero Power: <%= hero.power %></p><br>
+    <p>Hero Biography: <%= hero.biography %></p><br>
+  </div><br>
+<% end %>
